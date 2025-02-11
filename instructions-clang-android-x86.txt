@@ -38,9 +38,16 @@ git push origin clang-14-r450784e-a14-x86
 ## Adding other branches locally:
 git fetch --depth 1 origin android12L-d2-s8-release
 git checkout -b clang-12-r416183b-a12-x86 origin/android12L-d2-s8-release
+## TO SAVE UPLOAD SIZE:
+## Create the branch in githug. Ex. clang-12:
+   # - branch: lang-12-r416183b-a12-x86
+   #   from: android12L-d2-s8-release
 ## Repeat the clean versions step
+## Repeat the push steep with the current branch
 
-## Branches originals last releases 2025-Feb:
+
+## BRANCHES ##
+## Original branches last releases 2025-Feb:
 c9:  android11-qpr3-s1-release  clang-r353983c
     Branch specific:
 	* clang-9-r353983c-a11-x86
@@ -60,31 +67,10 @@ c14: android14-qpr3-s15-release clang-r450784e
 	* android14-qpr3-s14-release
 
 
-
-## DEPRECATED ##
-
-## Toolchain LLVM + Clang ##
-
-- clang 11.0.2 r383902
-- clang 11.0.2 r383902b
-- clang 11.0.2 r383902b1
-## Last branch version:
-- android11-qpr3-s1-release
-
-android11-qpr3-s1-release
-
-NOTE: For droidian, rename the dir to llvm-android-11.0-xxxxxxx for creating the tar
-
-## Configuration:
-- PATH=/clang-xxxxxxx/bin:$PATH	
-
-
-## Clang 14
-origin/llvm-r450784
+## TODO ##
 ## Clang 15
 origin/llvm-r458507 r468909b
 ## Clang 16
 origin/llvm-r475365b
 ## Clang 17
 origin/llvm-r487747
-
