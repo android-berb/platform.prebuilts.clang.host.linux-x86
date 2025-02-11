@@ -1,0 +1,84 @@
+# Clang android prebuilts host linux x86
+
+## Fork the googlesource repo from github
+https://github.com/android-berb/platform.prebuilts.clang.host.linux-x86.git
+or
+## Forked repo:
+https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86.git
+## Configure permissions to the forked repo
+
+## Select a branch in the prebuilts repo for the
+## wich contains the clang version we need
+Ex. last clang 14:
+    * android14-qpr3-s15-release
+## Create a new branch from the selected above
+## In this branch we clean the not needed versions
+## and the stable dirs.
+## NOTE: Can be done directly from github by creating
+##       a new branch from the selected above.
+
+## Clone shallow branch
+##A. Clone the new branch if created from github
+git clone --depth 1 -b clang-14-r450784e-a14-x86 repo_url
+cd platform.prebuilts.clang.host.linux-x86
+##B. Clone original branch and create the new locally
+git clone --depth 1 -b android14-qpr3-s15-release repo_url
+cd platform.prebuilts.clang.host.linux-x86
+git checkout -b clang-14-r450784e-a14-x86 android14-qpr3-s15-release
+
+## Now we should are in the cloned repo
+## and in the new branch for both above cases
+## Now we want to remove not needed dirs
+rm -r clang-xxxxx
+rm -r clang*stable llvm*stable
+git add -A
+git commit -m "Remove not needed versions"
+git push origin clang-14-r450784e-a14-x86
+
+## Adding other branches locally:
+git fetch --depth 1 origin android12L-d2-s8-release
+git checkout -b clang-12-r416183b-a12-x86 origin/android12L-d2-s8-release
+## Repeat the clean versions step
+
+## Branches originals last releases 2025-Feb:
+9:  android11-qpr3-s1-release  clang-r353983c
+    Branch specific:
+	* clang-9-r353983c-a11-x86
+12: android12L-d2-s8-release   clang-r416183b
+    Branch specific:
+	* clang-12-r416183b-a12-x86
+13: android13-d4-s2-release
+    Not implemented
+14: android14-qpr3-s15-release clang-r450784e
+    Branch specific:
+	* android14-qpr3-s14-release
+
+
+
+## DEPRECATED ##
+
+## Toolchain LLVM + Clang ##
+
+- clang 11.0.2 r383902
+- clang 11.0.2 r383902b
+- clang 11.0.2 r383902b1
+## Last branch version:
+- android11-qpr3-s1-release
+
+android11-qpr3-s1-release
+
+NOTE: For droidian, rename the dir to llvm-android-11.0-xxxxxxx for creating the tar
+
+## Configuration:
+- PATH=/clang-xxxxxxx/bin:$PATH	
+
+
+## Clang 14
+origin/llvm-r450784
+## Clang 15
+origin/llvm-r458507 r468909b
+## Clang 16
+origin/llvm-r475365b
+## Clang 17
+origin/llvm-r487747
+
