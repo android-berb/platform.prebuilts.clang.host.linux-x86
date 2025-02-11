@@ -41,15 +41,21 @@ git checkout -b clang-12-r416183b-a12-x86 origin/android12L-d2-s8-release
 ## Repeat the clean versions step
 
 ## Branches originals last releases 2025-Feb:
-9:  android11-qpr3-s1-release  clang-r353983c
+c9:  android11-qpr3-s1-release  clang-r353983c
     Branch specific:
 	* clang-9-r353983c-a11-x86
-12: android12L-d2-s8-release   clang-r416183b
+c10: android11-qpr3-s1-release  clang-r377782d
+    Branch specific:
+	* clang-10-r377782d-a11-x86
+c11: android11-qpr3-s1-release  clang-r383902b
+    Branch specific:
+	* clang-11-r383902b-a11-x86
+c12: android12L-d2-s8-release   clang-r416183b
     Branch specific:
 	* clang-12-r416183b-a12-x86
-13: android13-d4-s2-release
+c13: android13-d4-s2-release
     Not implemented
-14: android14-qpr3-s15-release clang-r450784e
+c14: android14-qpr3-s15-release clang-r450784e
     Branch specific:
 	* android14-qpr3-s14-release
 
