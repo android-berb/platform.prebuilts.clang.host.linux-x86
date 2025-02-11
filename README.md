@@ -1,2 +1,2 @@
-# template-git-branch-doc
-Repository for import as clean doc branch
+# clang android prebuilts specific versions
+Read the instructions docs
